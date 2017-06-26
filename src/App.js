@@ -30,7 +30,12 @@ export default class App extends Component {
             <div className="class-name">
               {/* 顶部导航栏 */}
               {this.state.renderNavBar?<NavBar />: 
-              <AppBar onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap.bind(this)}/>
+              <AppBar 
+              onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap.bind(this)}
+              style={{
+                backgroundColor: '#696969',
+              }}
+              />
               }
               {/* 左侧边栏 */}
               <AppLeftNav ref='drawer' />            
