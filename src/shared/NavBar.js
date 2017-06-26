@@ -1,8 +1,24 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import styles from '../style/Navbar.scss';
+import {Tabs, Tab} from 'material-ui/Tabs';
 
-export default class NavBar extends Component {
+ class NavBar extends Component {
+
+  // 1. 得有constructor
+   constructor(props, context) {
+      super(props, context);
+      this.context = context;
+   }
+    componentDidMount() {
+        let router = this.context.router;
+        document.getElementById('navbar-header').addEventListener('click', function(e){
+            if(e.target && e.target.nodeName === 'A'){
+                // 单独加上router是不行的， 首先得有
+                router.push(e.target.href);
+            }
+        })
+    }
     getStyles(){
         return{
             root:{
@@ -31,15 +47,21 @@ export default class NavBar extends Component {
         return (
             <MuiThemeProvider>
                 <div className='navbar' >
-                <div className="navbar-header" style={style.root}>
-                    <a className='navbar-header-item' href="#">首页</a>
+                <div className="navbar-header" id='navbar-header' style={style.root}>
+                    <a className='navbar-header-item' href="/home">首页</a>
                     <a className='navbar-header-item' href="#">归档</a>
                     <a className='navbar-header-item' href="#">标签</a>
                     <a className='navbar-header-item' href="#">友链</a>
-                    <a className='navbar-header-item' href="#">关于</a>
+                    <a className='navbar-header-item' href="about">关于</a>
                 </div>
                 </div>
             </MuiThemeProvider>
         );
     }
 }
+// 2. router 类型声明
+NavBar.contextTypes = {
+    router: React.PropTypes.object.isRequired
+};
+
+export default NavBar;
