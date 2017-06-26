@@ -1,39 +1,41 @@
 import React, { Component } from 'react';
 import { NICE, SUPER_NICE } from './colors';
+import NavBar from './shared/NavBar';
+import AppLeftNav from './shared/AppLeftNav';
+import AppBar from 'material-ui/AppBar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { counter: 0 };
-    this.interval = setInterval(() => this.tick(), 1000);
-  }
 
-  tick() {
-    this.setState({
-      counter: this.state.counter + this.props.increment
-    });
-  }
+export default class App extends Component {
+    constructor(props, context){
+      super(props, context);
+    }
+ 
+    _onLeftIconButtonTouchTap(){
+        this.refs.drawer.handleToggle();
+    }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  render() {
-    return (
-      <h1 style={{ color: this.props.color }}>
-        Counter ({this.props.increment}): {this.state.counter}
-      </h1>
-    );
-  }
-}
-
-export class App extends Component {
-  render() {
-    return (
-      <div>
-        <Counter increment={1} color={NICE} />
-        <Counter increment={5} color={SUPER_NICE} />
-      </div>
-    );
-  }
+    componentWillMount() { 
+      let setNavBarState = function(){
+        this.setState({
+           renderNavBar: document.body.clientWidth > 700
+        })
+      }.bind(this);
+      setNavBarState();
+      window.onresize = setNavBarState;
+    }
+    render() {
+        return (
+          <MuiThemeProvider>
+            <div className="class-name">
+              {/* 顶部导航栏 */}
+              {this.state.renderNavBar?<NavBar />: 
+              <AppBar onLeftIconButtonTouchTap={this._onLeftIconButtonTouchTap.bind(this)}/>
+              }
+              {/* 左侧边栏 */}
+              <AppLeftNav ref='drawer' />            
+            </div>
+            </MuiThemeProvider>
+        );
+    }
 }
