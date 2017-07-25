@@ -15,8 +15,5 @@ export default StyleSheet.create({
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
     'margin': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }],
     'minHeight': [{ 'unit': '%V', 'value': 1 }]
-  },
-  'li': {
-    'listStyleType': 'none'
   }
 });

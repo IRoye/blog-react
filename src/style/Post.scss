@@ -1,0 +1,7 @@
+.content-header::after{
+    content: '';
+    height: 2px;
+    display: block;
+    background-color: #009688;
+    margin: 10px auto;
+}

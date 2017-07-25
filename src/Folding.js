@@ -1,20 +1,24 @@
 /**
- * 折叠文章
+ * 折叠文章， 首页展示文章列表是不需要
+ * 
+ * markdown 的样式   文章详细页面的时候使用
  */
 import React,{Component} from 'react';
+import FoldingStyles from './style/Folding.scss';
+import {Link} from 'react-router';
+import config from './config/config';
+
 export default class Folding extends Component {
 
     getStyles(){
         return{
             root:{
-                height: '100vh',
                 textAlign: 'left',
             },
             content: {
                 position:'relative',
                 color: '#696969',
                 margin: '1rem auto',
-                borderTop : '1px solid #ddd', //feng的readHub定义border使用一个div来定义的？？？
                 borderBottom : '1px solid #ddd',
                 paddingBottom: '1rem',
                 width: '80%',
@@ -28,12 +32,14 @@ export default class Folding extends Component {
     }
     render() {
         const styles = this.getStyles();
+        const {title, content, brief, id, general} = this.props;
         return (
             <div className="app-fold" style={styles.root}>
-                <div className='app-flod-content' style={styles.content}>
+                {/*  需要父元素包裹浮动的子元素  */}
+                <div className='app-flod-content clearfix' style={styles.content}>
                     <h3>
                         <div className='main'>
-                            ISS 直播 SpaceX「龙」 飞船对接画面
+                            {title}
                             <div className='time' style={styles.time}>
                                 7 小时前
                             </div>
@@ -46,9 +52,16 @@ export default class Folding extends Component {
                         width: '90%',
                         marginTop: '1rem',
                     }}>
-                        对于未来将统一的国内安卓系统推送标准，并非是类似于谷歌 GCM/FCM 的模式，消息投递的方式与苹果 iOS 在原理上类似，服务器推送的消息到达设备之后将会直接展现，而不必唤醒应用。
-                    </div>
-                    
+                        {general}
+                    </div> 
+                    <Link to={{ pathname: '/post', query: { id: id } }} className='btn-hover' style={{
+                        float: 'right',
+                        color: '#4D85D1',
+                        padding: '0.3rem 1rem',
+                        clear: 'left',
+                        display: 'block',
+                    }}><span>继续阅读</span></Link>   
+                     {/* 提阿尼啊非浮动子元素 */}
                 </div>
             </div>
         );

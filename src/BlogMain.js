@@ -15,6 +15,7 @@ export default class BlogMain extends Component {
         return{
             root:{
                 display: 'flex',
+                padding: '1rem 1rem',   
             }
         }
     }

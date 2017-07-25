@@ -5,8 +5,8 @@ export default class MainSideBar extends Component {
     getStyles(){
         return{
             root: {
-                width: '45%',
-                border: '1px solid black',
+                width: '30%',
+                border: '1px solid #d5d5d5',
             }
         }
     }
