@@ -73,6 +73,7 @@ class Post extends Component {
             <div className="class-name" style={{
                 backgroundColor: '#eceff1',
                 listStyleType: 'disc',
+                height: '100%',
             }}>
                <div className='site-header' style={{
                   width: '100%',    
@@ -92,7 +93,6 @@ class Post extends Component {
                     width: '70%',
                     border: '1px solid #d5d5d5',
                     borderRadius: '5px',
-                    minHeight: '500px',
                     backgroundColor: '#ffffff',
                     padding: '1rem 1.5rem',
                 }}>
@@ -112,7 +112,6 @@ class Post extends Component {
                     borderRadius: '5px',
                      width: '20%',
                      border: '1px solid #d5d5d5',
-                     minHeight: '500px',
                      backgroundColor: '#ffffff',
                 }}>234</div>
                </div>

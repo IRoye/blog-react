@@ -5,5 +5,8 @@ export default StyleSheet.create({
     'padding': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 15 }],
     'color': '#8b96aa',
     'textDecorationLine': 'none'
+  },
+  'navbar-header-item:hover': {
+    'color': '#00BFFF'
   }
 });

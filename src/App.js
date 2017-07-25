@@ -6,6 +6,7 @@ import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Avatar from 'material-ui/Avatar';
 import BlogMain from './BlogMain';
+import Footer from './Footer';
 
 
 export default class App extends Component {
@@ -47,7 +48,7 @@ export default class App extends Component {
               {/* 左侧边栏 */}
               <AppLeftNav ref='drawer' />   
               {/*  也就是那些子路由 */}
-              {this.props.children}       
+              {this.props.children}  
             </div>
             </MuiThemeProvider>
         );

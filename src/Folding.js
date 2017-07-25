@@ -58,7 +58,7 @@ export default class Folding extends Component {
                         float: 'right',
                         color: '#4D85D1',
                         padding: '0.3rem 1rem',
-                        clear: 'left',
+                        clear: 'left',  
                         display: 'block',
                     }}><span>继续阅读</span></Link>   
                      {/* 提阿尼啊非浮动子元素 */}

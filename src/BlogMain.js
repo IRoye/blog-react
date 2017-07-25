@@ -15,7 +15,8 @@ export default class BlogMain extends Component {
         return{
             root:{
                 display: 'flex',
-                padding: '1rem 1rem',   
+                padding: '1rem 1rem', 
+                height: '100%',  
             }
         }
     }
@@ -27,6 +28,8 @@ export default class BlogMain extends Component {
                 <MainContent />
                 {/* 侧边栏 */}
                 <MainSideBar />
+
+                123
             </div>
         );
     }
