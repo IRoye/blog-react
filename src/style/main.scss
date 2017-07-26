@@ -4,6 +4,13 @@ html, body{
 	font-family: 'Monospace';
 	font-size: 16px;
 }
+html{
+	height: 100%;
+}
+body{
+	min-height: 100vh;
+	position: relative;
+}
 
 // 不大于700px 显示
 @media screen and(max-width:700px){
@@ -31,6 +38,7 @@ html, body{
 }
 
 // 隐藏
+// 下面这个宽度， 专业点的就叫做是  断点；
 @media screen and(min-width:700px){
 	// 打开siebar
     .app-mainSideBar{

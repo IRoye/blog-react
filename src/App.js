@@ -30,7 +30,9 @@ export default class App extends Component {
     render() {
         return (
           <MuiThemeProvider>
-            <div className="class-name">
+            <div className="class-name" style={{
+              height: '100%',
+            }}>
               {/* 顶部导航栏 */}
               {this.state.renderNavBar?<NavBar />: 
               <AppBar 
@@ -49,6 +51,7 @@ export default class App extends Component {
               <AppLeftNav ref='drawer' />   
               {/*  也就是那些子路由 */}
               {this.props.children}  
+              <Footer></Footer>
             </div>
             </MuiThemeProvider>
         );

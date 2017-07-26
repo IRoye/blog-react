@@ -74,6 +74,7 @@ class Post extends Component {
                 backgroundColor: '#eceff1',
                 listStyleType: 'disc',
                 height: '100%',
+                paddingBottom: '70px',
             }}>
                <div className='site-header' style={{
                   width: '100%',    
