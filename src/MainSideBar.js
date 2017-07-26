@@ -14,7 +14,7 @@ export default class MainSideBar extends Component {
         const styles = this.getStyles();
         return (
             <div className="app-mainSideBar" style={styles.root}>
-                sideBar
+                123
             </div>
         );
     }

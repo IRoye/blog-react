@@ -28,8 +28,6 @@ export default class BlogMain extends Component {
                 <MainContent />
                 {/* 侧边栏 */}
                 <MainSideBar />
-
-                123
             </div>
         );
     }

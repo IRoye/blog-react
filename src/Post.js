@@ -85,16 +85,15 @@ class Post extends Component {
 
                <div className='site-main' style={{
                    display: 'flex',
-                   margin: '5rem 2rem',
+                   marginTop: '1rem',
                    justifyContent: 'space-around',
 
                }}>
                 <div className='site-left' style={{
-                    width: '70%',
                     border: '1px solid #d5d5d5',
                     borderRadius: '5px',
                     backgroundColor: '#ffffff',
-                    padding: '1rem 1.5rem',
+                    padding: '1rem .5rem',
                 }}>
                  {/*  头部标题  */}
                  <div className='content-header' style={{

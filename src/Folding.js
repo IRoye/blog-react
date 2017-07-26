@@ -20,8 +20,7 @@ export default class Folding extends Component {
                 color: '#696969',
                 margin: '1rem auto',
                 borderBottom : '1px solid #ddd',
-                paddingBottom: '1rem',
-                width: '80%',
+                paddingBottom: '.1rem',
                 cursor: 'pointer',
             },
             time:{
@@ -57,7 +56,7 @@ export default class Folding extends Component {
                     <Link to={{ pathname: '/post', query: { id: id } }} className='btn-hover' style={{
                         float: 'right',
                         color: '#4D85D1',
-                        padding: '0.3rem 1rem',
+                        padding: '0.3rem .1rem',
                         clear: 'left',  
                         display: 'block',
                     }}><span>继续阅读</span></Link>   

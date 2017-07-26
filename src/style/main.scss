@@ -4,3 +4,51 @@ html, body{
 	font-family: 'Monospace';
 	font-size: 16px;
 }
+
+// 不大于700px 显示
+@media screen and(max-width:700px){
+	// 隐藏sidebar
+	.app-mainSideBar{
+		display: none;
+	}
+	.site-right{
+		display: none;
+	}
+	// 文章列表宽度要增加
+	.app-flod-content{
+		width: 90%;
+	}
+	.app-postwraper{
+		width: 100%;
+	}
+	.site-right{
+		width: 100%;
+	}
+	.site-main{
+	    margin: '5rem 2rem',
+	}
+
+}
+
+// 隐藏
+@media screen and(min-width:700px){
+	// 打开siebar
+    .app-mainSideBar{
+		display: block;
+	}
+	.site-right{
+		display: block;
+	}
+	.site-left{
+		width: 70%;
+	}
+	.site-main{
+	    margin: '5rem 2rem',
+	}
+	.app-flod-content{
+		width: 80%;
+	}
+	.app-postwraper{
+		width: 90%;
+	}
+}

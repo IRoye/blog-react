@@ -27,17 +27,13 @@ export default class MainContent extends Component {
     render() {
         let posts = this.state.posts.map((item, i) => {
             return (
-            <div className="class-name" key={i}>
+            <div className="app-postitem" key={i}>
                 <Folding key={i} id= {item._id} title={item.title} general={item.general} content={item.content} brief={item.content}/>
             </div>
         );
         });
         return (
-            <div className="class-name" style={
-                {
-                    width: '90%',
-                }
-            }>
+            <div className="app-postwraper">
                {posts}
             </div>
         );
