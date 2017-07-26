@@ -19,5 +19,8 @@ export default StyleSheet.create({
   'body': {
     'minHeight': [{ 'unit': 'vh', 'value': 100 }],
     'position': 'relative'
+  },
+  '*': {
+    'WebkitTapHighlightColor': 'transparent'
   }
 });

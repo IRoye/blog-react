@@ -33,7 +33,9 @@ export default class MainContent extends Component {
         );
         });
         return (
-            <div className="app-postwraper">
+            <div className="app-postwraper" style={{
+                marginBottom: '1rem',
+            }}>
                {posts}
             </div>
         );

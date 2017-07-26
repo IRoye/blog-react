@@ -10,7 +10,13 @@ export default class Footer extends Component {
                 minHeight: '70px',
                 position: 'absolute',
                 bottom: '0',
+                color: 'white',
+                lineHeight: '70px',
+                textAlign: 'center',
+                fontSize: '1rem',
+                fontWeight: '300',
             }}>
+            <span>&copy;2017 郭艳婷</span> 
             </footer>
         );
     }
